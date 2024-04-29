@@ -1,10 +1,6 @@
-let a = 5;
-let b = 5.6;
-console.log(typeof a);
-console.log(typeof b);
+const payRateUsd = 80;
+const projectHours = 40;
+const availableHours = (11 - 2) * 5;
 
-a = 'string';
-console.log(typeof a);
-
-let isAdmin = false;
-console.log(typeof isAdmin);
+console.log('Смогу ли я работать? ' + (availableHours > projectHours));
+console.log('Соклько я хочу получить? ' + (payRateUsd * projectHours))
