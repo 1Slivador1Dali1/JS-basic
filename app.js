@@ -19,15 +19,25 @@
 //     console.log('Не сможет купить');
 // }
 
-const vvediet = prompt('7 + или - 15');
+// const vvediet = prompt('7 + или - 15');
 
-switch (true) {
-    case Number(vvediet) === 22:
-    case Number(vvediet) === -8:
-    case vvediet === 'Я не робот':
-        console.log('Успех');
-        break;
-    default:
-        console.log('Вы робот!');
-        break;
-}
+// switch (true) {
+//     case Number(vvediet) === 22:
+//     case Number(vvediet) === -8:
+//     case vvediet === 'Я не робот':
+//         console.log('Успех');
+//         break;
+//     default:
+//         console.log('Вы робот!');
+//         break;
+// }
+
+const balance = 1200;
+const bonusBalance = 90;
+const isBanned = false;
+const isExist = false;
+const isSalling = true;
+
+const canBuy = (balance > 1000 || bonusBalance > 100) && !isBanned && !isExist && isSalling;
+
+console.log(`Могу ли я купить игру: ${canBuy ? 'Да' : 'Нет'}`);
