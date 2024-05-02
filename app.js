@@ -32,12 +32,15 @@
 //         break;
 // }
 
-const balance = 1200;
-const bonusBalance = 90;
-const isBanned = false;
-const isExist = false;
-const isSalling = true;
+// const balance = 1200;
+// const bonusBalance = 90;
+// const isBanned = false;
+// const isExist = false;
+// const isSalling = true;
 
-const canBuy = (balance > 1000 || bonusBalance > 100) && !isBanned && !isExist && isSalling;
+// const canBuy = (balance > 1000 || bonusBalance > 100) && !isBanned && !isExist && isSalling;
 
-console.log(`Могу ли я купить игру: ${canBuy ? 'Да' : 'Нет'}`);
+// console.log(`Могу ли я купить игру: ${canBuy ? 'Да' : 'Нет'}`);
+
+const toPowerArrow = (num, power) => num ** power;
+console.log(toPowerArrow(2, 3));
