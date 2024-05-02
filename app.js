@@ -42,5 +42,23 @@
 
 // console.log(`Могу ли я купить игру: ${canBuy ? 'Да' : 'Нет'}`);
 
-const toPowerArrow = (num, power) => num ** power;
-console.log(toPowerArrow(2, 3));
+// const toPowerArrow = (num, power) => num ** power;
+// console.log(toPowerArrow(2, 3));
+
+function computerCredit(age, hasJob = false) {
+    switch (true) {
+        case age > 24 && hasJob:
+            return 500;
+        case age > 24:
+            return 100;
+        default:
+            return 0;
+    }
+}
+
+function canBuy(productPrice, age, money, hasJob = false) {
+    const crediMoney = computerCredit(age, hasJob);
+    return productPrice <= money + crediMoney;
+}
+
+console.log(canBuy(2000, 27, 1900));
