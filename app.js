@@ -45,20 +45,58 @@
 // const toPowerArrow = (num, power) => num ** power;
 // console.log(toPowerArrow(2, 3));
 
-function computerCredit(age, hasJob = false) {
-    switch (true) {
-        case age > 24 && hasJob:
-            return 500;
-        case age > 24:
-            return 100;
-        default:
-            return 0;
+// function computerCredit(age, hasJob = false) {
+//     switch (true) {
+//         case age > 24 && hasJob:
+//             return 500;
+//         case age > 24:
+//             return 100;
+//         default:
+//             return 0;
+//     }
+// }
+
+// function canBuy(productPrice, age, money, hasJob = false) {
+//     const crediMoney = computerCredit(age, hasJob);
+//     return productPrice <= money + crediMoney;
+// }
+
+// console.log(canBuy(2000, 27, 1900));
+
+
+const tasks = ['Задача 1'];
+
+function Add(task) {
+    tasks.push(task);
+}
+
+function Remove(task) {
+    const index = tasks.indexOf(task);
+    if (index === -1) {
+        return;
     }
+    tasks.splice(index, 1);
 }
 
-function canBuy(productPrice, age, money, hasJob = false) {
-    const crediMoney = computerCredit(age, hasJob);
-    return productPrice <= money + crediMoney;
+function Prioritize(task) {
+    const index = tasks.indexOf(task);
+    if (index === -1) {
+        return;
+    }
+    const oldTask = tasks[index];
+    tasks.splice(index, 1);
+    tasks.unshift(oldTask);
 }
 
-console.log(canBuy(2000, 27, 1900));
+console.log(tasks);
+
+
+Add('Задача 2');
+Add('Задача 3');
+console.log(tasks);
+
+Remove('Задача 2');
+console.log(tasks);
+
+Prioritize('Задача 3');
+console.log(tasks);
