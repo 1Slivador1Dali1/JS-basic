@@ -113,11 +113,29 @@
 
 // ex 51
 
-const arr = ['!', 'JS', 'Люблю', 'Я'];
-const newArr = [];
+// const arr = ['!', 'JS', 'Люблю', 'Я'];
+// const newArr = [];
 
-for(let i = (arr.length - 1); i >= 0; i--) {
-    newArr.push(arr[i]);
-}
+// for(let i = (arr.length - 1); i >= 0; i--) {
+//     newArr.push(arr[i]);
+// }
 
-console.log(newArr.join(" "));
+// console.log(newArr.join(" "));
+
+//------------------------------------------------------------------
+
+// ex 59 - Стрелочные функции
+
+// function power (pow) {
+//     return function (num) {
+//         return num**pow;
+//     }
+// } //Обычная функция с функцией высшего порядка
+
+const power = pow => num => num**pow; //Стрелочная функция
+
+const powerOfTwo = power(2);
+console.log(powerOfTwo(5));
+
+const powerOfThree = power(3);
+console.log(powerOfThree(5));
