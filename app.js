@@ -132,10 +132,12 @@
 //     }
 // } //Обычная функция с функцией высшего порядка
 
-const power = pow => num => num**pow; //Стрелочная функция
+// const power = pow => num => num**pow; //Стрелочная функция
 
-const powerOfTwo = power(2);
-console.log(powerOfTwo(5));
+// const powerOfTwo = power(2);
+// console.log(powerOfTwo(5));
 
-const powerOfThree = power(3);
-console.log(powerOfThree(5));
+// const powerOfThree = power(3);
+// console.log(powerOfThree(5));
+
+//------------------------------------------------------------------
