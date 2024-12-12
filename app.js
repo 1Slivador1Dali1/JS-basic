@@ -241,22 +241,38 @@
 
 // ex 65 - упр
 
-const arr = [1, 4, 4, 10];
+// const arr = [1, 4, 4, 10];
 
-const avg = arr.reduce((acc, el, i) => {
-  if (i != arr.length - 1) {
-    return acc + el;
-  } else {
-    return (acc + el) / arr.length;
-  }
-}, 0);
+// const avg = arr.reduce((acc, el, i) => {
+//   if (i != arr.length - 1) {
+//     return acc + el;
+//   } else {
+//     return (acc + el) / arr.length;
+//   }
+// }, 0);
 
-console.log(avg);
+// console.log(avg);
 
 //------------------------------------------------------------------
 
 // ex 66 - find findindex
 
+const arr = [2, 4, 4, 10];
+
+let elGT5;
+for (const el of arr) {
+  if (el > 5) {
+    elGT5 = el;
+    break;
+  }
+}
+console.log(elGT5);
+
+elGT5 = arr.find((el) => el > 5);
+console.log(elGT5);
+
+elGT5 = arr.findIndex((el) => el < 0); // если элем нет то возвращает -1 а не undefined
+console.log(elGT5);
 //------------------------------------------------------------------
 
 // ex 67 - упр
