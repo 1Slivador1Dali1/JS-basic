@@ -197,11 +197,11 @@
 
 // ex 63 - упр
 
-const prices = [
-  [100, 200],
-  [120, 100],
-  [200, 350],
-];
+// const prices = [
+//   [100, 200],
+//   [120, 100],
+//   [200, 350],
+// ];
 // не правильно
 // const posiriveChange = prices
 //   .filter((res, x, y, i) => {
@@ -212,14 +212,30 @@ const prices = [
 // console.log(posiriveChange);
 
 // верно
-const res = prices
-  .map((product) => product[1] - product[0])
-  .filter((price) => price > 0);
-console.log(res);
+// const res = prices
+//   .map((product) => product[1] - product[0])
+//   .filter((price) => price > 0);
+// console.log(res);
 
 //------------------------------------------------------------------
 
 // ex 64 - reduce
+
+const operations = [100, -20, 7, -30, 50];
+
+let balance = 0;
+
+for (operation of operations) {
+  balance += operation;
+}
+
+console.log(balance);
+
+const finalBalance = operations.reduce((acc, operation) => {
+  return (acc += operation);
+}, 0);
+
+console.log(finalBalance);
 
 //------------------------------------------------------------------
 
