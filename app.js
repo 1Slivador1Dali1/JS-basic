@@ -142,28 +142,73 @@
 
 // ex 61 - map
 
-const transactionInUSD = [10, -7, 50, -10, 100];
+// const transactionInUSD = [10, -7, 50, -10, 100];
 
-const transactionInRub = [];
-for (const transaction of transactionInUSD) {
-  transactionInRub.push(transaction * 100);
-}
+// const transactionInRub = [];
+// for (const transaction of transactionInUSD) {
+//   transactionInRub.push(transaction * 100);
+// }
 
-console.log(transactionInUSD);
-console.log(transactionInRub);
+// console.log(transactionInUSD);
+// console.log(transactionInRub);
 
-const transactionInRub2 = transactionInUSD.map((transaction) => {
-  return transaction * 100;
-});
+// const transactionInRub2 = transactionInUSD.map((transaction) => {
+//   return transaction * 100;
+// });
 
-console.log(transactionInUSD);
-console.log(transactionInRub2);
+// console.log(transactionInUSD);
+// console.log(transactionInRub2);
 
-const transactionInRub3 = transactionInUSD.map(
-  (transaction) => transaction * 100
-);
+// const transactionInRub3 = transactionInUSD.map(
+//   (transaction) => transaction * 100
+// );
 
-console.log(transactionInUSD);
-console.log(transactionInRub3);
+// console.log(transactionInUSD);
+// console.log(transactionInRub3);
 
 //------------------------------------------------------------------
+
+// ex 62 - filter
+
+const operations = [100, -20, 7, -20, 50];
+const positiveOperations = [];
+for (const operation of operations) {
+  if (operation > 0) {
+    positiveOperations.push(operation);
+  }
+}
+
+console.log(positiveOperations);
+
+const positiveOperations2 = operations.filter((operation) => {
+  return operation > 0;
+});
+console.log(positiveOperations2);
+
+const positiveRUBOperations = operations
+  .filter((operation) => {
+    return operation > 0;
+  })
+  .map((operation) => operation * 100);
+
+console.log(positiveRUBOperations);
+
+//------------------------------------------------------------------
+
+// ex 63 - упр
+
+//------------------------------------------------------------------
+
+// ex 64 - map
+
+//------------------------------------------------------------------
+
+// ex 61 - map
+
+//------------------------------------------------------------------
+
+// ex 61 - map
+
+//------------------------------------------------------------------
+
+// ex 61 - map
