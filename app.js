@@ -221,25 +221,37 @@
 
 // ex 64 - reduce
 
-const operations = [100, -20, 7, -30, 50];
+// const operations = [100, -20, 7, -30, 50];
 
-let balance = 0;
+// let balance = 0;
 
-for (operation of operations) {
-  balance += operation;
-}
+// for (operation of operations) {
+//   balance += operation;
+// }
 
-console.log(balance);
+// console.log(balance);
 
-const finalBalance = operations.reduce((acc, operation) => {
-  return (acc += operation);
-}, 0);
+// const finalBalance = operations.reduce((acc, operation) => {
+//   return (acc += operation);
+// }, 0);
 
-console.log(finalBalance);
+// console.log(finalBalance);
 
 //------------------------------------------------------------------
 
 // ex 65 - упр
+
+const arr = [1, 4, 4, 10];
+
+const avg = arr.reduce((acc, el, i) => {
+  if (i != arr.length - 1) {
+    return acc + el;
+  } else {
+    return (acc + el) / arr.length;
+  }
+}, 0);
+
+console.log(avg);
 
 //------------------------------------------------------------------
 
