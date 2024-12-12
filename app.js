@@ -304,41 +304,58 @@
 //------------------------------------------------------------------
 // ex 69 - sort
 
-const users = ["Вася", "Маша", "Катя", "Аня"];
-console.log(users);
-users.sort();
-console.log(users);
+// const users = ["Вася", "Маша", "Катя", "Аня"];
+// console.log(users);
+// users.sort();
+// console.log(users);
 
-const operations = [100, -300, -100, 50, 480];
-console.log(operations);
-operations.sort();
-console.log(operations); // без параметра сорт как строки
+// const operations = [100, -300, -100, 50, 480];
+// console.log(operations);
+// operations.sort();
+// console.log(operations); // без параметра сорт как строки
 
-// < 0 - a , b - сохраняем порядок
-// > 0 - a, b - меняем порядок
+// // < 0 - a , b - сохраняем порядок
+// // > 0 - a, b - меняем порядок
 
-operations.sort((a, b) => {
-  if (a > b) {
-    return 1;
-  }
-  if (a < b) {
-    return -1;
-  }
-});
-console.log(operations);
+// operations.sort((a, b) => {
+//   if (a > b) {
+//     return 1;
+//   }
+//   if (a < b) {
+//     return -1;
+//   }
+// });
+// console.log(operations);
 
-operations.sort((a, b) => {
-  if (a < b) {
-    return 1;
-  }
-  if (a > b) {
-    return -1;
-  }
-});
-console.log(operations);
+// operations.sort((a, b) => {
+//   if (a < b) {
+//     return 1;
+//   }
+//   if (a > b) {
+//     return -1;
+//   }
+// });
+// console.log(operations);
 
 //------------------------------------------------------------------
-// ex 70 - упр
+// ex 70 - Быстрое создание массива
+
+const arr = [1, 2, 3, 4, 5];
+
+console.log(new Array(1, 2, 3, 4, 5));
+
+const arr2 = new Array(5);
+console.log(arr2);
+
+arr2.fill(1, 0, 3);
+arr2.fill(2, 3, 5);
+console.log(arr2);
+
+const arr3 = Array.from({ length: 5 }, () => 5);
+console.log(arr3);
+
+const arr4 = Array.from({ length: 5 }, (cur, i) => i + 1);
+console.log(arr4);
 
 //------------------------------------------------------------------
 // ex 71 - упр
