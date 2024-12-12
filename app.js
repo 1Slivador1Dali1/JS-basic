@@ -290,19 +290,52 @@
 
 // ex 68 - flat flatMap
 
-const prices = [
-  [2, 4],
-  [3, 4],
-  [10, [20, 50]],
-];
+// const prices = [
+//   [2, 4],
+//   [3, 4],
+//   [10, [20, 50]],
+// ];
 
-const res = prices.flat(2); // принимает значение на глубину
-console.log(res);
-const res2 = prices.flatMap((el) => el.concat([1]));
-console.log(res2);
+// const res = prices.flat(2); // принимает значение на глубину
+// console.log(res);
+// const res2 = prices.flatMap((el) => el.concat([1]));
+// console.log(res2);
 
 //------------------------------------------------------------------
-// ex 69 - упр
+// ex 69 - sort
+
+const users = ["Вася", "Маша", "Катя", "Аня"];
+console.log(users);
+users.sort();
+console.log(users);
+
+const operations = [100, -300, -100, 50, 480];
+console.log(operations);
+operations.sort();
+console.log(operations); // без параметра сорт как строки
+
+// < 0 - a , b - сохраняем порядок
+// > 0 - a, b - меняем порядок
+
+operations.sort((a, b) => {
+  if (a > b) {
+    return 1;
+  }
+  if (a < b) {
+    return -1;
+  }
+});
+console.log(operations);
+
+operations.sort((a, b) => {
+  if (a < b) {
+    return 1;
+  }
+  if (a > b) {
+    return -1;
+  }
+});
+console.log(operations);
 
 //------------------------------------------------------------------
 // ex 70 - упр
