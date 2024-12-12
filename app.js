@@ -63,7 +63,6 @@
 
 // console.log(canBuy(2000, 27, 1900));
 
-
 // const tasks = ['Задача 1'];
 
 // function Add(task) {
@@ -89,7 +88,6 @@
 // }
 
 // console.log(tasks);
-
 
 // Add('Задача 2');
 // Add('Задача 3');
@@ -139,5 +137,33 @@
 
 // const powerOfThree = power(3);
 // console.log(powerOfThree(5));
+
+//------------------------------------------------------------------
+
+// ex 61 - map
+
+const transactionInUSD = [10, -7, 50, -10, 100];
+
+const transactionInRub = [];
+for (const transaction of transactionInUSD) {
+  transactionInRub.push(transaction * 100);
+}
+
+console.log(transactionInUSD);
+console.log(transactionInRub);
+
+const transactionInRub2 = transactionInUSD.map((transaction) => {
+  return transaction * 100;
+});
+
+console.log(transactionInUSD);
+console.log(transactionInRub2);
+
+const transactionInRub3 = transactionInUSD.map(
+  (transaction) => transaction * 100
+);
+
+console.log(transactionInUSD);
+console.log(transactionInRub3);
 
 //------------------------------------------------------------------
