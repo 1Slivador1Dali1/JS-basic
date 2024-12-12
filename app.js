@@ -277,18 +277,29 @@
 
 // ex 67 - упр
 
-const arr = [2, 4, 4, 10];
+// const arr = [2, 4, 4, 10];
 
-function some(array, element) {
-  const res = array.find((el) => el === element);
-  return res == undefined ? false : true;
-}
+// function some(array, element) {
+//   const res = array.find((el) => el === element);
+//   return res == undefined ? false : true;
+// }
 
-console.log(some(arr, 2));
-console.log(arr.some((el) => el === 0));
+// console.log(some(arr, 2));
+// console.log(arr.some((el) => el === 0));
 //------------------------------------------------------------------
 
-// ex 68 - упр
+// ex 68 - flat flatMap
+
+const prices = [
+  [2, 4],
+  [3, 4],
+  [10, [20, 50]],
+];
+
+const res = prices.flat(2); // принимает значение на глубину
+console.log(res);
+const res2 = prices.flatMap((el) => el.concat([1]));
+console.log(res2);
 
 //------------------------------------------------------------------
 // ex 69 - упр
