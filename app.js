@@ -257,22 +257,52 @@
 
 // ex 66 - find findindex
 
-const arr = [2, 4, 4, 10];
+// const arr = [2, 4, 4, 10];
 
-let elGT5;
-for (const el of arr) {
-  if (el > 5) {
-    elGT5 = el;
-    break;
-  }
-}
-console.log(elGT5);
+// let elGT5;
+// for (const el of arr) {
+//   if (el > 5) {
+//     elGT5 = el;
+//     break;
+//   }
+// }
+// console.log(elGT5);
 
-elGT5 = arr.find((el) => el > 5);
-console.log(elGT5);
+// elGT5 = arr.find((el) => el > 5);
+// console.log(elGT5);
 
-elGT5 = arr.findIndex((el) => el < 0); // если элем нет то возвращает -1 а не undefined
-console.log(elGT5);
+// elGT5 = arr.findIndex((el) => el < 0); // если элем нет то возвращает -1 а не undefined
+// console.log(elGT5);
 //------------------------------------------------------------------
 
 // ex 67 - упр
+
+const arr = [2, 4, 4, 10];
+
+function some(array, element) {
+  const res = array.find((el) => el === element);
+  return res == undefined ? false : true;
+}
+
+console.log(some(arr, 2));
+console.log(arr.some((el) => el === 0));
+//------------------------------------------------------------------
+
+// ex 68 - упр
+
+//------------------------------------------------------------------
+// ex 69 - упр
+
+//------------------------------------------------------------------
+// ex 70 - упр
+
+//------------------------------------------------------------------
+// ex 71 - упр
+
+//------------------------------------------------------------------
+// ex 72 - упр
+
+//------------------------------------------------------------------
+// ex 73 - упр
+
+//------------------------------------------------------------------
