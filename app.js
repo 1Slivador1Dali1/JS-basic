@@ -340,26 +340,40 @@
 //------------------------------------------------------------------
 // ex 70 - Быстрое создание массива
 
-const arr = [1, 2, 3, 4, 5];
+// const arr = [1, 2, 3, 4, 5];
 
-console.log(new Array(1, 2, 3, 4, 5));
+// console.log(new Array(1, 2, 3, 4, 5));
 
-const arr2 = new Array(5);
-console.log(arr2);
+// const arr2 = new Array(5);
+// console.log(arr2);
 
-arr2.fill(1, 0, 3);
-arr2.fill(2, 3, 5);
-console.log(arr2);
+// arr2.fill(1, 0, 3);
+// arr2.fill(2, 3, 5);
+// console.log(arr2);
 
-const arr3 = Array.from({ length: 5 }, () => 5);
-console.log(arr3);
+// const arr3 = Array.from({ length: 5 }, () => 5);
+// console.log(arr3);
 
-const arr4 = Array.from({ length: 5 }, (cur, i) => i + 1);
-console.log(arr4);
+// const arr4 = Array.from({ length: 5 }, (cur, i) => i + 1);
+// console.log(arr4);
 
 //------------------------------------------------------------------
-// ex 71 - упр
+// ex 72 - строки базовые методы
 
+const userName = "Vlad slav";
+console.log(userName[0]);
+console.log(userName[8]); // эмодзи занимают 2 буквы
+console.log(userName.charAt(2));
+console.log(userName.length);
+
+console.log(userName.indexOf("l"));
+console.log(userName.indexOf("v"));
+console.log(userName.toLowerCase().indexOf("v"));
+console.log(userName.lastIndexOf("a"));
+console.log(userName.includes("s"));
+
+console.log(userName.slice(5));
+console.log(userName.slice(5, 7));
 //------------------------------------------------------------------
 // ex 72 - упр
 
