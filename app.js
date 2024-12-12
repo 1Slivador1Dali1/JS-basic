@@ -170,45 +170,65 @@
 
 // ex 62 - filter
 
-const operations = [100, -20, 7, -20, 50];
-const positiveOperations = [];
-for (const operation of operations) {
-  if (operation > 0) {
-    positiveOperations.push(operation);
-  }
-}
+// const operations = [100, -20, 7, -20, 50];
+// const positiveOperations = [];
+// for (const operation of operations) {
+//   if (operation > 0) {
+//     positiveOperations.push(operation);
+//   }
+// }
 
-console.log(positiveOperations);
+// console.log(positiveOperations);
 
-const positiveOperations2 = operations.filter((operation) => {
-  return operation > 0;
-});
-console.log(positiveOperations2);
+// const positiveOperations2 = operations.filter((operation) => {
+//   return operation > 0;
+// });
+// console.log(positiveOperations2);
 
-const positiveRUBOperations = operations
-  .filter((operation) => {
-    return operation > 0;
-  })
-  .map((operation) => operation * 100);
+// const positiveRUBOperations = operations
+//   .filter((operation) => {
+//     return operation > 0;
+//   })
+//   .map((operation) => operation * 100);
 
-console.log(positiveRUBOperations);
+// console.log(positiveRUBOperations);
 
 //------------------------------------------------------------------
 
 // ex 63 - упр
 
+const prices = [
+  [100, 200],
+  [120, 100],
+  [200, 350],
+];
+// не правильно
+// const posiriveChange = prices
+//   .filter((res, x, y, i) => {
+//     res = prices[i][y] - prices[i][x];
+//     return res;
+//   })
+//   .map((res) => res > 0);
+// console.log(posiriveChange);
+
+// верно
+const res = prices
+  .map((product) => product[1] - product[0])
+  .filter((price) => price > 0);
+console.log(res);
+
 //------------------------------------------------------------------
 
-// ex 64 - map
+// ex 64 - reduce
 
 //------------------------------------------------------------------
 
-// ex 61 - map
+// ex 65 - упр
 
 //------------------------------------------------------------------
 
-// ex 61 - map
+// ex 66 - find findindex
 
 //------------------------------------------------------------------
 
-// ex 61 - map
+// ex 67 - упр
