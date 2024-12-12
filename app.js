@@ -360,22 +360,40 @@
 //------------------------------------------------------------------
 // ex 72 - строки базовые методы
 
-const userName = "Vlad slav";
-console.log(userName[0]);
-console.log(userName[8]); // эмодзи занимают 2 буквы
-console.log(userName.charAt(2));
-console.log(userName.length);
+// const userName = "Vlad slav";
+// console.log(userName[0]);
+// console.log(userName[8]); // эмодзи занимают 2 буквы
+// console.log(userName.charAt(2));
+// console.log(userName.length);
 
-console.log(userName.indexOf("l"));
-console.log(userName.indexOf("v"));
-console.log(userName.toLowerCase().indexOf("v"));
-console.log(userName.lastIndexOf("a"));
-console.log(userName.includes("s"));
+// console.log(userName.indexOf("l"));
+// console.log(userName.indexOf("v"));
+// console.log(userName.toLowerCase().indexOf("v"));
+// console.log(userName.lastIndexOf("a"));
+// console.log(userName.includes("s"));
 
-console.log(userName.slice(5));
-console.log(userName.slice(5, 7));
+// console.log(userName.slice(5));
+// console.log(userName.slice(5, 7));
 //------------------------------------------------------------------
-// ex 72 - упр
+// ex 73 - упр
+
+const userName = "Вася aka Terminator Пупкин";
+//Мое решение
+const arr = userName.split(" ");
+console.log(arr);
+const name = arr[0];
+const lastName = arr[arr.length - 1];
+console.log(name);
+console.log(lastName);
+
+//решение автора
+const name2 = userName.slice(0, userName.indexOf(" "));
+console.log(name2);
+const lastName2 = userName.slice(
+  userName.lastIndexOf(" ") + 1,
+  userName.length
+);
+console.log(lastName);
 
 //------------------------------------------------------------------
 // ex 73 - упр
