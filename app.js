@@ -399,19 +399,73 @@
 
 // ex 74 - Преобразование строки
 
-const str = "Вася Пупкин";
-console.log(str.includes("п"));
-console.log(str.startsWith("В")); //Проверяет начинается ли строка на эту букву
-console.log(str.endsWith("н")); //Заканчивается ли строка на эту букву
-// Данные методы (выше) возвращают булевы значения
+// const str = "Вася Пупкин";
+// console.log(str.includes("п"));
+// console.log(str.startsWith("В")); //Проверяет начинается ли строка на эту букву
+// console.log(str.endsWith("н")); //Заканчивается ли строка на эту букву
+// // Данные методы (выше) возвращают булевы значения
 
-console.log(str.toLowerCase());
-console.log(str.toUpperCase());
-console.log(str.replace("П", "В"));
-console.log(str.replaceAll("п", "и"));
-// методы выше не изменяют изначальную строку а создают новую
+// console.log(str.toLowerCase());
+// console.log(str.toUpperCase());
+// console.log(str.replace("П", "В"));
+// console.log(str.replaceAll("п", "и"));
+// // методы выше не изменяют изначальную строку а создают новую
+
 //------------------------------------------------------------------
+
 // ex 75 -упр
+//верные
+const num1 = "89103235356";
+const num2 = "+79103235356";
+const num3 = "+7(910)3235356";
+const num4 = "+7(910) 323-53-56";
+const num5 = " +7(910) 323-53-56 ";
+//не верные
+const num1Error = "89103235";
+const num2Error = "+7d910d323-53-56";
+const num3Error = "9+7103235356";
+const num4Error = "89103g235356";
+
+function isPhoneNumber(num) {
+  num = num.trim(); // Убирает пробелы по бокам
+  num = num.replace("+7", "8"); //Заменяет одно на другое
+  if (!num.startsWith("8")) {
+    //Если начинается НЕ с 8 то возвращаем false
+    return false;
+  }
+  // удаляем символы и пробелы ниже
+  num = num.replaceAll("(", "");
+  num = num.replaceAll(")", "");
+  num = num.replaceAll(" ", "");
+  num = num.replaceAll("-", "");
+
+  //Проверяем на длину номера
+  if (num.length != 11) {
+    return false;
+  }
+
+  let onlyNumber = true;
+  for (const char of num) {
+    if (isNaN(Number(char))) {
+      onlyNamber = false;
+      break;
+    }
+  }
+
+  return onlyNumber;
+}
+
+console.log(isPhoneNumber(num1));
+console.log(isPhoneNumber(num2));
+console.log(isPhoneNumber(num3));
+console.log(isPhoneNumber(num4));
+console.log(isPhoneNumber(num5));
+
+console.log(isPhoneNumber(num1Error));
+console.log(isPhoneNumber(num2Error));
+console.log(isPhoneNumber(num3Error));
+console.log(isPhoneNumber(num4Error));
+
 //------------------------------------------------------------------
 // ex 76 -Строки и массивы
 //------------------------------------------------------------------
