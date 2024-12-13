@@ -495,12 +495,26 @@
 
 // ex 78 -упр
 
-const card = "2342834503458353";
+// const card = "2342834503458353";
 
-console.log(card.slice(-4).padStart(16, "*"));
+// console.log(card.slice(-4).padStart(16, "*"));
 
 //------------------------------------------------------------------
+
 // ex 79 -Знакомство с объектами
+
+const userArray = ["Вася", "Пупкин", 24];
+console.log(userArray);
+
+const userObject = {
+  firstName: "Вася",
+  lastName: "Пупкин",
+  age: 24,
+};
+
+console.log(userObject);
+console.log(typeof userObject);
+
 //------------------------------------------------------------------
 // ex 80 -Обращение к элементам
 //------------------------------------------------------------------
