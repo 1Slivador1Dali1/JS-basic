@@ -503,17 +503,17 @@
 
 // ex 79 -Знакомство с объектами
 
-const userArray = ["Вася", "Пупкин", 24];
-console.log(userArray);
+// const userArray = ["Вася", "Пупкин", 24];
+// console.log(userArray);
 
-const userObject = {
-  firstName: "Вася",
-  lastName: "Пупкин",
-  age: 24,
-};
+// const userObject = {
+//   firstName: "Вася",
+//   lastName: "Пупкин",
+//   age: 24,
+// };
 
-console.log(userObject);
-console.log(typeof userObject);
+// console.log(userObject);
+// console.log(typeof userObject);
 
 //------------------------------------------------------------------
 // ex 80 -Обращение к элементам
