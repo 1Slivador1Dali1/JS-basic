@@ -470,20 +470,27 @@
 
 // ex 76 -Строки и массивы
 
-const userName = "Вася Пупкин";
-console.log(userName.split(" "));
-// Деструктуризация (destructuring assignment) – это особый синтаксис присваивания,
-// при котором можно присвоить массив или объект сразу
-// нескольким переменным, разбив его на части. показано ниже
-const [firstName, lastName] = userName.split(" ");
-console.log(firstName);
-console.log(lastName);
-// из массива в строку
-const arr = ["Ты", "знаешь", "JS"];
-console.log(arr.join(" "));
+// const userName = "Вася Пупкин";
+// console.log(userName.split(" "));
+// // Деструктуризация (destructuring assignment) – это особый синтаксис присваивания,
+// // при котором можно присвоить массив или объект сразу
+// // нескольким переменным, разбив его на части. показано ниже
+// const [firstName, lastName] = userName.split(" ");
+// console.log(firstName);
+// console.log(lastName);
+// // из массива в строку
+// const arr = ["Ты", "знаешь", "JS"];
+// console.log(arr.join(" "));
 
 //------------------------------------------------------------------
+
 // ex 77 -Дополнение строк
+
+const film = "Звездные войны";
+console.log(film.padStart(10, "*"));
+console.log(film.padEnd(2, "*"));
+console.log(film.repeat(5));
+
 //------------------------------------------------------------------
 // ex 78 -упр
 //------------------------------------------------------------------
